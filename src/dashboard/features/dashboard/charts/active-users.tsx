@@ -21,8 +21,8 @@ export const ActiveUsers = () => {
   return (
     <Card className="col-span-4">
       <ChartHeader
-        title="Active Users"
-        description="The total number active users per day using the chat and inline suggestions."
+        title="活跃用户"
+        description="每天使用聊天和内联建议的活跃用户总数。"
       />
       <CardContent>
         <ChartContainer config={chartConfig} className="w-full h-80">
@@ -68,15 +68,15 @@ const chartConfig: Record<
   }
 > = {
   ["totalUsers"]: {
-    label: "Total users",
+    label: "总用户数",
     key: "totalUsers",
   },
   ["totalChatUsers"]: {
-    label: "Total chat users",
+    label: "聊天用户总数",
     key: "totalChatUsers",
   },
   ["timeFrameDisplay"]: {
-    label: "Time frame display",
+    label: "时间范围显示",
     key: "timeFrameDisplay",
   },
 };

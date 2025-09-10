@@ -28,8 +28,8 @@ export const Language = () => {
   return (
     <Card className="col-span-4 md:col-span-2">
       <ChartHeader
-        title="Language"
-        description="Percentage of active users per language"
+        title="编程语言"
+        description="每种语言的活跃用户百分比"
       />
       <CardContent>
         <div className="w-full h-full flex flex-col gap-4 ">

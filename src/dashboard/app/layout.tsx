@@ -8,8 +8,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "GitHub Copilot Metrics Dashboard",
-  description: "GitHub Copilot Metrics Dashboard",
+  title: "GitHub Copilot 指标仪表板",
+  description: "GitHub Copilot 指标仪表板",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning>
       <body className={cn(inter.className)}>
         <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen w-full flex-col bg-muted-foreground/5 ">

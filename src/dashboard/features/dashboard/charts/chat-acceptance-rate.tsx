@@ -23,8 +23,8 @@ export const ChatAcceptanceRate = () => {
   return (
     <Card className="col-span-4">
       <ChartHeader
-        title="Chat Acceptance rate"
-        description=" The ratio of GitHub Copilot Chat total insertion and copy events to the total Github Copilot Chats"
+        title="聊天接受率"
+        description="GitHub Copilot 聊天总插入和复制事件与 GitHub Copilot 聊天总数的比率"
       />
 
       <CardContent>
@@ -68,12 +68,12 @@ const chartConfig: Record<
   }
 > = {
   ["acceptanceChatRate"]: {
-    label: "Chat Acceptance rate (%) ",
+    label: "聊天接受率 (%) ",
     key: "acceptanceChatRate",
   },
 
   ["timeFrameDisplay"]: {
-    label: "Time frame display",
+    label: "时间范围显示",
     key: "timeFrameDisplay",
   },
 };

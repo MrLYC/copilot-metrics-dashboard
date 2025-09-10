@@ -23,9 +23,8 @@ export const AcceptanceRate = () => {
   return (
     <Card className="col-span-4">
       <ChartHeader
-        title="Acceptance rate"
-        description=" The ratio of accepted code and lines suggested to the total code and lines suggested by GitHub
-          Copilot"
+        title="接受率"
+        description="GitHub Copilot 建议的被接受代码和代码行与总建议代码和代码行的比率"
       />
 
       <CardContent>
@@ -75,17 +74,17 @@ const chartConfig: Record<
   }
 > = {
   ["acceptanceRate"]: {
-    label: "Acceptance rate (%) ",
+    label: "接受率 (%) ",
     key: "acceptanceRate",
   },
 
   ["acceptanceLinesRate"]: {
-    label: "Acceptance Lines rate (%) ",
+    label: "代码行接受率 (%) ",
     key: "acceptanceLinesRate",
   },
 
   ["timeFrameDisplay"]: {
-    label: "Time frame display",
+    label: "时间范围显示",
     key: "timeFrameDisplay",
   },
 };

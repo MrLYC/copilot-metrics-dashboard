@@ -11,13 +11,13 @@ interface ErrorDetails {
 
 export const ErrorPage = ({ error }: { error: string | ErrorDetails }) => {
   // Convert string errors to ErrorDetails format
-  const errorDetails: ErrorDetails = typeof error === "string" 
+  const errorDetails: ErrorDetails = typeof error === "string"
     ? { message: error }
     : error;
 
   // Set defaults if not provided
   const title = errorDetails.title || getDefaultTitle(errorDetails.status);
-  
+
   return (
     <div className="mx-auto w-full max-w-2xl container py-6 h-full flex-1 items-center justify-center flex">
       <Card className="w-full">
@@ -27,7 +27,7 @@ export const ErrorPage = ({ error }: { error: string | ErrorDetails }) => {
             <CardTitle className="text-destructive">{title}</CardTitle>
           </div>
         </CardHeader>
-        
+
         <CardContent className="pt-6">
           {errorDetails.message}
         </CardContent>
@@ -40,11 +40,11 @@ export const ErrorPage = ({ error }: { error: string | ErrorDetails }) => {
 function getDefaultTitle(status?: "ERROR" | "NOT_FOUND" | "UNAUTHORIZED"): string {
   switch (status) {
     case "NOT_FOUND":
-      return "Resource Not Found";
+      return "资源未找到";
     case "UNAUTHORIZED":
-      return "Authentication Required";
+      return "需要身份验证";
     case "ERROR":
     default:
-      return "An Error Occurred";
+      return "发生错误";
   }
 }

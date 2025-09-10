@@ -16,7 +16,7 @@ export default async function Dashboard(props: IProps) {
   const isCosmosDb = cosmosConfiguration();
 
   if (!features.seats) {
-    return <ErrorPage error="Feature not available"></ErrorPage>
+    return <ErrorPage error="功能不可用"></ErrorPage>
   }
 
   const seatsPromise = getCopilotSeats(props.searchParams);
@@ -28,7 +28,7 @@ export default async function Dashboard(props: IProps) {
   return (
     <DataProvider copilotSeats={seats.response}>
       <main className="flex flex-1 flex-col gap-4 md:gap-8 pb-8">
-        <Header title="Seats" isCosmosDb={isCosmosDb} />
+        <Header title="坐席管理" isCosmosDb={isCosmosDb} />
         <div className="mx-auto w-full max-w-6xl container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <Stats />

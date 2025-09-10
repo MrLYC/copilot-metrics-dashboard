@@ -28,12 +28,12 @@ const MenuItems = () => {
     <>
       <MainNavItem path="/">
         <LayoutDashboard size={18} strokeWidth={1.4} />
-        Dashboard
+        仪表板
       </MainNavItem>
       {features.seats && (
         <MainNavItem path="/seats">
           <Users size={18} strokeWidth={1.4} />
-          Seats
+          坐席管理
         </MainNavItem>
       )}
     </>
@@ -52,7 +52,7 @@ export const AppHeader = () => {
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="shrink-0 md:hidden">
             <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle navigation menu</span>
+            <span className="sr-only">切换导航菜单</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="left">

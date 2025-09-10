@@ -21,8 +21,8 @@ export const Editor = () => {
   return (
     <Card className="col-span-4 md:col-span-2">
       <ChartHeader
-        title="Editor"
-        description="Percentage of active users per editor"
+        title="代码编辑器"
+        description="每种编辑器的活跃用户百分比"
       />
       <CardContent>
         <div className="w-full h-full flex flex-col gap-4 ">

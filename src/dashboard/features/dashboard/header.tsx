@@ -10,7 +10,7 @@ interface HeaderProps {
 export const Header = ({ isCosmosDb }: HeaderProps) => {
   return (
     <PageHeader>
-      <PageTitle>GitHub Copilot Metrics</PageTitle>
+      <PageTitle>GitHub Copilot 指标</PageTitle>
       <div className="flex gap-8 justify-between flex-col md:flex-row">
         <Filters />
         <div className="flex gap-2">
