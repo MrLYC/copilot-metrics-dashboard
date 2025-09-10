@@ -67,9 +67,7 @@ export function DropdownFilter(props: DropdownFilterProps) {
                   return (
                     <CommandItem
                       key={option.value}
-                      onSelect={() => {
-                        onSelect(option.value);
-                      }}
+                      onSelect={onSelect}
                       value={option.value}
                     >
                       <div
