@@ -19,7 +19,7 @@ export function WeekendFilter() {
       ) : (
         <CalendarMinus className="mr-2 h-4 w-4" />
       )}
-      {dashboard.hideWeekends ? "Show weekends" : "Hide weekends"}
+      {dashboard.hideWeekends ? "显示周末" : "隐藏周末"}
     </Button>
   );
 }

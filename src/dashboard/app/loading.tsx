@@ -5,7 +5,7 @@ export default function Loading() {
   return (
     <main className="flex flex-1 flex-col gap-4 md:gap-8 pb-8">
       <PageHeader>
-        <PageTitle>Dashboard</PageTitle>
+        <PageTitle>仪表板</PageTitle>
         <div className="flex gap-8 justify-between">
           <Skeleton className="h-7 w-[250px]" />
           <div className="flex gap-2">

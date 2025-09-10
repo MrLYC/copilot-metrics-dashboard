@@ -18,21 +18,21 @@ export const Stats = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 col-span-4">
       <StatsCard
-        title="Acceptance average"
-        tip="Acceptance average is the average of the acceptance rate for lines of code and chat suggestions, including chat insertion and copy events."
-        description="Combined acceptance average"
+        title="接受率平均值"
+        tip="接受率平均值是代码行和聊天建议的接受率平均值，包括聊天插入和复制事件。"
+        description="综合接受率平均值"
         value={isLoading ? "..." : acceptanceAverage.toFixed(0) + "%"}
       ></StatsCard>
       <StatsCard
-        title="Active users"
-        tip="The average number of Copilot users with daily activity belonging to any Copilot feature, for the given period. Includes passive activity such as receiving a code suggestion, as well as engagement activity such as accepting a code suggestion or prompting chat. Does not include authentication events."
-        description="Average of daily active users"
+        title="活跃用户"
+        tip="在给定期间内，具有日常活动的 Copilot 用户的平均数量，属于任何 Copilot 功能。包括被动活动（如接收代码建议）和参与活动（如接受代码建议或聊天提示）。不包括身份验证事件。"
+        description="日常活跃用户平均值"
         value={isLoading ? "..." : averageActiveUsers.toFixed(0) + ""}
       ></StatsCard>
       <StatsCard
-        title="Adoption rate"
-        tip="The adoption rate is the percentage of active seats compared to the total seats."
-        description="Adoption rate by active seats"
+        title="采用率"
+        tip="采用率是活跃坐席与总坐席的百分比。"
+        description="按活跃坐席计算的采用率"
         value={isLoading ? "..." : adoptionRate.toFixed(0) + "%"}
       ></StatsCard>
       <Overview />
@@ -64,10 +64,10 @@ export const Overview = () => {
   return (
     <Card className="col-span-1">
       <ChartHeader
-        title={"Seat information"}
-        description={"Overview of GitHub Copilot seats"}
+        title="坐席信息"
+        description="GitHub Copilot 坐席概览"
         tip={
-          "The active seats are the seats where last activity is within the last 30 days. The inactive seats are the seats where last activity is null or older than 30 days."
+          "活跃坐席是最后活动在过去 30 天内的坐席。非活跃坐席是最后活动为空或超过 30 天的坐席。"
         }
       />
       <CardContent className=" flex flex-col gap-2">
@@ -75,29 +75,29 @@ export const Overview = () => {
           <>
             <div className="flex-1 flex flex-row gap-2">
               <div className="text-xs flex-1 text-muted-foreground">
-                Total seats
+                总坐席
               </div>
               <div className="text-xs">...</div>
             </div>
             <div className="flex-1 flex flex-row gap-2">
               <div className="text-xs flex-1 text-muted-foreground">
-                Active seats
+                活跃坐席
               </div>
               <div className="text-xs">...</div>
             </div>
             <div className="flex-1 flex flex-row gap-2">
               <div className="text-xs flex-1 text-muted-foreground">
-                Inactive seats
+                非活跃坐席
               </div>
               <div className="text-xs">...</div>
             </div>
           </>
         ) : (
           <>
-            <Item label="Total seats" value={total_seats} />
-            <Item label="Active seats" value={total_active_seats} />
+            <Item label="总坐席" value={total_seats} />
+            <Item label="活跃坐席" value={total_active_seats} />
             <Item
-              label="Inactive seats"
+              label="非活跃坐席"
               value={total_seats - total_active_seats}
             />
           </>

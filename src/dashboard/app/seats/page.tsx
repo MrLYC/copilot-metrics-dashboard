@@ -2,17 +2,17 @@ import Dashboard, { IProps } from "@/features/seats/seats-page";
 import { Suspense } from "react";
 import Loading from "./loading";
 import { Metadata } from 'next';
- 
+
 export const metadata: Metadata = {
-  title: "GitHub Copilot Seats Dashboard",
-  description: "GitHub Copilot Seats Dashboard",
+  title: "GitHub Copilot 坐席管理仪表板",
+  description: "GitHub Copilot 坐席管理仪表板",
 };
 export const dynamic = "force-dynamic";
 export default function Home(props: IProps) {
 
   let id = "initial-seats-dashboard";
 
-  if (props.searchParams.date ) {
+  if (props.searchParams.date) {
     id = `${id}-${props.searchParams.date}`;
   }
 

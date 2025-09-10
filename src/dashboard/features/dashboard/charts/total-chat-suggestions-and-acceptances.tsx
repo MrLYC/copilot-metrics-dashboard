@@ -23,8 +23,8 @@ export const TotalChatsAndAcceptances = () => {
   return (
     <Card className="col-span-4">
       <ChartHeader
-        title="Total chat suggestions and acceptance"
-        description="The total number of Copilot Chat suggestions, including insertion and copy events vs the total number of Copilot Chats."
+        title="聊天建议总数和接受数"
+        description="Copilot 聊天建议的总数，包括插入和复制事件与 Copilot 聊天总数的对比。"
       />
       <CardContent>
         <ChartContainer config={chartConfig} className="w-full h-80">
@@ -80,19 +80,19 @@ const chartConfig: Record<
   }
 > = {
   ["totalChats"]: {
-    label: "Total Chats",
+    label: "聊天总数",
     key: "totalChats",
   },
   ["totalChatInsertionEvents"]: {
-    label: "Total Chat Insertion Events",
+    label: "聊天插入事件总数",
     key: "totalChatInsertionEvents",
   },
   ["totalChatCopyEvents"]: {
-    label: "Total Chat Copy Events",
+    label: "聊天复制事件总数",
     key: "totalChatCopyEvents",
   },
   ["timeFrameDisplay"]: {
-    label: "Time frame display",
+    label: "时间范围显示",
     key: "timeFrameDisplay",
   },
 };

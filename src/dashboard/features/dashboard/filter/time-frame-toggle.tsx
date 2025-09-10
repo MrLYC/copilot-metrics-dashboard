@@ -15,7 +15,7 @@ export const TimeFrameToggle = () => {
             dashboardStore.onTimeFrameChange("daily");
           }}
         >
-          Daily
+          按日
         </TabsTrigger>
         <TabsTrigger
           value="weekly"
@@ -24,7 +24,7 @@ export const TimeFrameToggle = () => {
             dashboardStore.onTimeFrameChange("weekly");
           }}
         >
-          Weekly
+          按周
         </TabsTrigger>
         <TabsTrigger
           value="monthly"
@@ -33,14 +33,14 @@ export const TimeFrameToggle = () => {
             dashboardStore.onTimeFrameChange("monthly");
           }}
         >
-          Monthly
+          按月
         </TabsTrigger>
       </TabsList>
     </Tabs>
   );
 };
 
-interface IProps extends PropsWithChildren {}
+interface IProps extends PropsWithChildren { }
 
 interface TimeFrameState {
   selectedTimeFrame: TimeFrame;

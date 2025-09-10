@@ -23,8 +23,8 @@ export const TotalSuggestionsAndAcceptances = () => {
   return (
     <Card className="col-span-4">
       <ChartHeader
-        title="Total code suggestions and acceptance"
-        description="The total number of Copilot code completion suggestions shown to users vs the total number of Copilot code completion suggestions accepted by users."
+        title="代码建议总数和接受数"
+        description="向用户显示的 Copilot 代码完成建议总数与用户接受的 Copilot 代码完成建议总数的对比。"
       />
       <CardContent>
         <ChartContainer config={chartConfig} className="w-full h-80">
@@ -73,15 +73,15 @@ const chartConfig: Record<
   }
 > = {
   ["totalAcceptancesCount"]: {
-    label: "Total acceptances",
+    label: "接受总数",
     key: "totalAcceptancesCount",
   },
   ["totalSuggestionsCount"]: {
-    label: "Total suggestions",
+    label: "建议总数",
     key: "totalSuggestionsCount",
   },
   ["timeFrameDisplay"]: {
-    label: "Time frame display",
+    label: "时间范围显示",
     key: "timeFrameDisplay",
   },
 };

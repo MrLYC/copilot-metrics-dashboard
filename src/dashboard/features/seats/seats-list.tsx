@@ -38,15 +38,15 @@ const stringIncludes = (row: any, id: string, value: string) => {
 };
 
 const columns: ColumnDef<SeatData>[] = [
-    { accessorKey: "user", title: "User", filter: stringIncludes },
-    { accessorKey: "organization", title: "Organization", filter: arrayIncludes },
-    { accessorKey: "team", title: "Team", filter: arrayIncludes },
-    { accessorKey: "createdAt", title: "Create Date" },
-    { accessorKey: "updatedAt", title: "Update Date" },
-    { accessorKey: "lastActivityAt", title: "Last Activity Date" },
-    { accessorKey: "lastActivityEditor", title: "Last Activity Editor" },
-    { accessorKey: "planType", title: "Plan", filter: arrayIncludes },
-    { accessorKey: "pendingCancellationDate", title: "Pending Cancellation" }
+    { accessorKey: "user", title: "用户", filter: stringIncludes },
+    { accessorKey: "organization", title: "组织", filter: arrayIncludes },
+    { accessorKey: "team", title: "团队", filter: arrayIncludes },
+    { accessorKey: "createdAt", title: "创建日期" },
+    { accessorKey: "updatedAt", title: "更新日期" },
+    { accessorKey: "lastActivityAt", title: "最后活动日期" },
+    { accessorKey: "lastActivityEditor", title: "最后活动编辑器" },
+    { accessorKey: "planType", title: "计划类型", filter: arrayIncludes },
+    { accessorKey: "pendingCancellationDate", title: "待取消日期" }
 ].map((col) => ({
     accessorKey: col.accessorKey,
     id: col.accessorKey,
@@ -68,7 +68,7 @@ export const SeatsList = () => {
     return (
         <Card className="col-span-4">
             <ChartHeader
-                title="Assigned Seats"
+                title="已分配坐席"
                 description=""
             />
             <CardContent>
@@ -92,12 +92,12 @@ export const SeatsList = () => {
                     }}
                     search={{
                         column: "user",
-                        placeholder: "Filter seats...",
+                        placeholder: "过滤坐席...",
                     }}
                     filters={[
-                        ...(hasOrganization ? [{ column: "organization", label: "Organizations" }] : []), 
-                        ...(hasTeam ? [{ column: "team", label: "Team" }] : []),
-                        { column: "planType", label: "Plan Type" }
+                        ...(hasOrganization ? [{ column: "organization", label: "组织" }] : []),
+                        ...(hasTeam ? [{ column: "team", label: "团队" }] : []),
+                        { column: "planType", label: "计划类型" }
                     ]}
                     enableExport
                 />
