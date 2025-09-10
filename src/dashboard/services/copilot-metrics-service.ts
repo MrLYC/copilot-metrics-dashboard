@@ -18,7 +18,7 @@ export interface IFilter {
 
 export const getCopilotMetrics = async (
   filter: IFilter
-): Promise<ServerActionResponse<CopilotUsageOutput[]>> => {  
+): Promise<ServerActionResponse<CopilotUsageOutput[]>> => {
   const env = ensureGitHubEnvConfig();
   const isCosmosConfig = cosmosConfiguration();
 
@@ -40,17 +40,16 @@ export const getCopilotMetrics = async (
           filter.organization = organization;
         }
         break;
-    }
-    if (isCosmosConfig) {
-      return await getCopilotMetricsFromDatabase(filter);
+    }    if (isCosmosConfig) {
+      return getCopilotMetricsFromDatabase(filter);
     }
     
     // If teams are specified, use the teams-specific API function
     if (filter.team && filter.team.length > 0) {
-      return await getCopilotTeamsMetricsFromApi(filter);
+      return getCopilotTeamsMetricsFromApi(filter);
     }
     
-    return await getCopilotMetricsFromApi(filter);
+    return getCopilotMetricsFromApi(filter);
   } catch (e) {
     return unknownResponseError(e);
   }
